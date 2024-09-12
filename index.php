@@ -289,7 +289,94 @@ if(num1 == num2){
     echo "number are not the same";
 }
 
+echo "<br>";
 
+switch ("i") {
+    case 'i':
+        echo "am i";
+        break;
+    case 'jesus':
+        echo "is Lord";
+        break;
+    
+    default:
+        echo "i dont even know myself";
+        break;
+}
+
+function greetTheWorld ($name) {
+    echo "<br>";
+    echo "hello $name";
+}
+
+greetTheWorld (name: "dbest");
+
+function calculate ($num1, $num2, $op = "+"): int|float{
+    echo "<br>";
+    switch ($op) {
+        case "+";
+            return $num1 + $num2;
+            
+            case "*";
+            return $num1 * $num2;
+            
+            case "-";
+            return $num1 - $num2;
+            
+            case "/";
+            return $num1 / $num2;
+           
+        
+        default:
+           return "$op is not a supported";
+            
+    }
+}
+
+echo calculate (num1: 17, num2: 2, op: "/");
+
+echo "<br>";
+
+// function getGrade($grade): string {
+//     switch ($grade) {
+//         case 'A':
+//            return "you are very good";
+//         case 'B':
+//             return "you are very good";
+//         case 'C':
+//             return "you are very good";
+//         case 'D':
+//             return "you are very good";
+//         case 'E':
+//             return "you are very good";
+//         case 'F':
+//             return "you are very good";
+        
+//         default:
+//             return "Your input is not valid";
+//     }
+// }
+
+// echo getGrade(grade: "B");
+
+
+// $grade = "91";
+
+// echo match ($grade) {
+//      "A","a","90","100", => "You are very good",
+//      "B","b","80", => "You are good",
+//      default, => "You failed",
+// }
+
+function getGrade($grade): string{
+    return match ($grade) {
+        "A","a","90","100", => "You are very good",
+        "B","b","80", => "You are good",
+        default, => "You failed",
+   };
+}
+
+echo getGrade(grade: "A");
 
 
 
