@@ -378,6 +378,137 @@ function getGrade($grade): string{
 
 echo getGrade(grade: "A");
 
+echo "<hr>";
+
+function sayHi($i) {
+    echo "<br>", $i, "hi";
+}
+
+// for loop
+
+for($i = 0; $i < 10; $i++) {
+    sayHi($i);
+}
+
+$i = 0;
+
+while($i < 10){
+$i++;
+echo "<br>", "i hate while loop";
+}
+
+$s = 0;
+
+do{
+    
+echo "<br>", "hello $s"; 
+$s++;
+}
+while($s < 10);
+
+$names = ["Ademola", "ibukunoluwa", "wale", "adekogbe", "joseph"];
+
+// for each
+
+$names[0] = "best";
+
+echo "<br>";
+array_push($names, "olaoluwa");
+print_r($names);
+
+
+foreach($names as $n) {
+    echo "<br>". $n . " myG";
+}
+
+$wale;
+foreach($names as $n) {
+    if ($n === "wale"){
+        $wale = $n;
+        continue;
+    }
+    echo "<br>", "kill $n";
+}
+
+echo "<br>" . "we have saved $wale";
+
+foreach($names as $n) {
+    if ($n === "wale"){
+        $wale = $n;
+        break;
+    }
+    echo "<br>", "i am not wale my name is $n";
+}
+
+echo "<br>" . "we have found $wale";
+
+echo "<br>"; 
+
+$me = [
+    "name" => "Ademola",
+    "gender" => "Name",
+];
+
+print_r($me);
+echo "<br>";
+echo $me["name"];
+
+echo "<br>";
+$car = [
+    "brand" => "Toyota",
+    "model" => "camry",
+    "year" => "2021",
+];
+
+print_r($car);
+
+echo "<br>";
+
+echo implode ( " , " ,$car);
+
+echo "<br>";
+
+foreach($car as $key => $value) {
+    echo $key . " . " . $value . "<br>";
+}
+
+echo "<br>";
+
+echo checkTheValue ( "ade",  ["hello", "wale", "dolapo", "ade", "baba", "iya"] );
+
+function checkTheValue($value, array $listOfValues): string{
+    for ($i = 0; $i < count( $listOfValues); $i++){
+        if($value === $listOfValues[$i]){
+            return "the index of this value is $i and the value is $value";
+        }
+    }
+}
+
+echo "<br>";
+
+$num = [4, 9, 8, 7, 3, 9];
+
+echo sumArray($num);
+
+function sumArray(array $num) {
+    $sum = 0;
+
+    for ($i = 0; $i < count($num); $i++) {
+        $sum += $num[$i]; 
+    }
+
+    return $sum; 
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
